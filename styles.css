@@ -1,0 +1,119 @@
+header {
+  background-image: url("./images/ctf-front.jpg");
+
+  height: 4000px;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+  color: white;
+  font-family: 'Podkova', "Courier New", sans-serif;
+}
+
+header h1, header h2 {
+  display: block;
+  position: absolute;
+
+  right: 0;
+}
+
+.title {
+  top: 1200px;
+
+  font-size: 3em;
+  font-weight: 800;
+}
+
+.author {
+  top: 1500px;
+  font-size: 2.25em;
+  font-weight: 700;
+}
+
+
+
+#letter-1 {
+  margin-bottom: 300px;
+  height: 1000px;
+  position: relative;
+}
+
+#letter-1 .letter {
+  position: absolute;
+  top: 500px;
+}
+
+#letter-1 {
+  font-family: "Courier New", serif;
+}
+
+#letter-2 {
+  background-color: black;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  height: 2000px;
+  position: relative;
+}
+
+
+.phone-backdrop {
+  margin: 0 auto;
+  max-width: 325px;
+  height: 600px;
+  border: white solid 1px;
+  border-radius: 2em;
+  padding: 12px;
+  padding-top: 70px;
+}
+
+.screen-backdrop {
+  max-width: 320px;
+  height: 500px;
+  background: white;
+  padding: 10px;
+  padding-left: 28px;
+  padding-right: 13px;
+  overflow-y: scroll;
+  border: black solid 2px;
+  border-left: gray solid 2px;
+}
+
+.button-backdrop {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: white solid 2px;
+  margin: 10px auto;
+}
+
+#letter-2 .letter {
+  margin: 0 auto;
+  padding: 12px 0px;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  color: white;
+  background: rgb(0, 125, 252);
+  font-size: 13px;
+  text-align: left;
+  border-radius: 1.5em;
+  line-height: 1.25em;
+}
+
+#letter-2 .letter p {
+  display: block;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#letter-2 p:first-of-type {
+  margin-top: 0;
+}
+
+#letter-2 p:last-of-type {
+  margin-bottom: 0;
+}
