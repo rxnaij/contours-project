@@ -35,39 +35,108 @@ header h1, header h2 {
   font-weight: 700;
 }
 
+
+
+p {
+  margin-bottom: 2em;
+  line-height: 1.25em;
+  font-size: 18px;
+}
+
+p:only-child {
+  margin: 0;
+}
+
+section {
+  padding: 100px;
+  padding-top: 300px;
+}
+
+.letter-bg {
+  /* Absolutely position it, but stretch it to all four corners, then put it just behind #search's z-index */
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 99;
+
+  /* Pull the background 70px higher to the same place as #bg's */
+  /*background-position: center -70px;*/
+
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+}
+
+.letter {
+  z-index: 100;
+  background-color: black;
+  margin: 0 auto;
+  padding: 50px;
+  filter: blur();
+  background: rgb(34,34,34); /* for IE */
+  background: rgba(34,34,34,0.75);
+}
+
+.letter + .letter {
+  margin-top: 100px;
+}
+
+
 /* Sections by letter */
 
 /* Letter 1 */
 
 #letter-1 {
-  margin-bottom: 300px;
   height: 1000px;
   position: relative;
+  background-image: url("./images/ctf-full.jpg");
+
+  height: 1200px;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  color: white;
+  font-family: 'Podkova', "Courier New", sans-serif;
 }
 
 #letter-1 .letter {
-  position: absolute;
   top: 500px;
 }
 
-#letter-1 {
-  font-family: "Courier New", serif;
+#letter-1 h1 {
+  font-size: 3em;
+  font-weight: 800;
+  margin-bottom: 1em;
 }
+
 
 /* Letter 2 */
 
 #letter-2 {
-  background-color: black;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  background-image: url("images/ctf-close.jpg");
 
-  height: 2000px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 1000px;
   position: relative;
+  padding: 100px;
+}
+
+#letter-2 .letter {
+  color: white;
+  font-family: "Podkova", serif;
 }
 
 .phone-backdrop {
-  position: absolute;
-  top: 1000px;
+  margin: 0 auto;
+  z-index: 100;
 
   max-width: 325px;
   height: 600px;
@@ -75,9 +144,13 @@ header h1, header h2 {
   border-radius: 2em;
   padding: 12px;
   padding-top: 70px;
+
+  background: rgb(34,34,34); /* for IE */
+  background: rgba(34,34,34,0.75);
 }
 
 .screen-backdrop {
+  z-index: 100;
   max-width: 320px;
   height: 500px;
   background: white;
@@ -92,6 +165,7 @@ header h1, header h2 {
 }
 
 .button-backdrop {
+  z-index: 100;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -102,32 +176,235 @@ header h1, header h2 {
 #letter-2 .letter {
   display: inline-block;
 
-  padding: 12px 0px;
+  /*padding: 12px 0px;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   color: white;
   background: rgb(0, 125, 252);
   font-size: 13px;
   text-align: left;
   border-radius: 1.5em;
-  line-height: 1.25em;
+  line-height: 1.25em;*/
 }
 
-#letter-2 .letter + .letter {
+.message-bubble {
+  padding: 12px 0;
+  padding-left: 12px;
+
+  background: rgb(0, 125, 252);
+
+  text-align: left;
+  border-radius: 1.5em;
+}
+
+.message-bubble p {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  color: white;
+  font-size: 13px;
+  line-height: 1.25em;
+  margin-bottom: 0;
+}
+
+.message-bubble + .message-bubble {
   margin-top: 9px;
 }
 
-#letter-2 .letter p {
+.message-bubble p {
   display: block;
   padding-left: 1em;
   padding-right: 1em;
   margin-top: 1em;
   margin-bottom: 1em;
+  text-align: right;
 }
 
-#letter-2 p:first-of-type {
+.message-bubble p:first-of-type {
   margin-top: 0;
 }
 
-#letter-2 p:last-of-type {
+.message-bubble p:last-of-type {
   margin-bottom: 0;
+}
+
+/* Letter 3 */
+#letter-3 {
+  background-image: url("./images/interior-person.jpg");
+
+  height: 1200px;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  color: white;
+  font-family: 'Podkova', "Courier New", sans-serif;
+}
+
+/* Letter 4 */
+#letter-4 {
+  background-image: url("./images/groovecoaster.jpg");
+
+  height: 1200px;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+  color: white;
+  font-family: 'Podkova', "Courier New", sans-serif;
+}
+
+/* Letter 5 */
+#letter-5 {
+  background-image: url("./images/tekken.jpg"); /* interior-person */
+
+  height: 1200px;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+  color: white;
+  font-family: 'Podkova', "Courier New", sans-serif;
+}
+
+/* Letter 6 */
+#letter-6 {
+  background-image: url("./images/pingpong.jpg"); /* ctf */
+
+  height: 1200px;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+  color: white;
+  font-family: 'Podkova', "Courier New", sans-serif;
+}
+
+/* Letter 7 */
+#letter-7 {
+  background-image: url("./images/rewards.jpg"); /* rewards */
+
+  height: 1200px;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+  color: white;
+  font-family: 'Podkova', "Courier New", sans-serif;
+}
+
+/* Letter 8 */
+#letter-8 {
+  background-image: url("./images/wall.jpg"); /* floating message bubbles */
+
+  height: 1200px;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+  color: white;
+  font-family: 'Podkova', "Courier New", sans-serif;
+  position: relative;
+
+
+}
+
+.blur-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-position: center -70px;
+
+  opacity: 0.5;
+
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+}
+
+/* Letter 6 */
+#letter-9 {
+  background-image: url("./images/streetfighter.jpg"); /* streetfighter */
+
+  height: 1200px;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+  color: white;
+  font-family: 'Podkova', "Courier New", sans-serif;
+}
+
+#letter-9 .letter {
+  width: 80%;
+}
+
+/* Letter 10 */
+#letter-10 {
+  background-image: url("./images/night-full.jpg"); /* phone */
+
+  height: 1200px;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+  color: white;
+  font-family: 'Podkova', "Courier New", sans-serif;
+}
+
+/* Conclusion */
+#conclusion {
+  background-image: url("./images/ctf-night-front.jpg");
+
+  height: 4000px;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+  color: white;
+  font-family: 'Podkova', "Courier New", sans-serif;
+}
+
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+.parallax__layer--back {
+  transform: translateZ(-1px);
 }
