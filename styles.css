@@ -70,12 +70,12 @@ section {
 
 .letter {
   z-index: 100;
-  background-color: black;
   margin: 0 auto;
   padding: 50px;
   filter: blur();
   background: rgb(34,34,34); /* for IE */
-  background: rgba(34,34,34,0.75);
+  background: rgba(0, 125, 252, 0.75);
+  border-radius: 1.25em;
 }
 
 .letter + .letter {
